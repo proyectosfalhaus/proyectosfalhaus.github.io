@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falhaus — Brochure Institucional 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Paleta Falhaus institucional */
+  --bl:#1e3a6f;      /* azul Falhaus oscuro */
+  --bl2:#2c4a85;     /* azul medio */
+  --bl3:#3d5fa3;     /* azul claro */
+  --r:#c14a3b;       /* rojo terracota acento */
+  --r2:#a13828;      /* rojo oscuro */
+  --o:#7a8357;       /* verde oliva secundario */
+  --ol:#9aa578;      /* oliva claro */
+  --bg:#f5f1e8;      /* beige cálido fondo */
+  --bg2:#ede7d7;     /* beige medio */
+  --w:#ffffff;
+  --t:#2d2d2d;       /* texto */
+  --tl:#5a5a5a;      /* texto light */
+  --br:#d9cfbe;      /* borde */
+  --brl:#e8e0cf;     /* borde light */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--t);background:var(--bg);line-height:1.7;font-size:16px}
+.container{max-width:1120px;margin:0 auto;padding:0 44px}
+
+/* HERO PORTADA */
+.hero{background:linear-gradient(135deg,var(--bl) 0%,var(--bl2) 60%,var(--bl3) 100%);color:var(--w);padding:120px 0 140px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:0;right:-120px;width:500px;height:500px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--r),transparent 50%,var(--r) 100%)}
+.hero-inner{position:relative;z-index:2}
+.hero-logo{display:block;width:280px;max-width:80%;height:auto;margin-bottom:44px;filter:brightness(0) invert(1);opacity:.97}
+.hero .eyebrow{display:inline-block;font-size:.72rem;letter-spacing:4px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:32px;padding:8px 22px;border:1px solid rgba(193,74,59,.6);border-radius:2px;background:rgba(193,74,59,.12)}
+.hero h1{font-family:'Playfair Display',serif;font-size:3.6rem;font-weight:700;line-height:1.15;margin-bottom:24px;letter-spacing:-.4px;max-width:950px}
+.hero .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:1.45rem;font-weight:400;color:#e8d5ce;line-height:1.5;max-width:780px;margin-bottom:50px}
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;margin-top:60px;padding-top:36px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-meta .item .lbl{font-size:.66rem;letter-spacing:2.5px;text-transform:uppercase;color:#f0d3cc;font-weight:600;margin-bottom:8px}
+.hero-meta .item .val{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--w);font-weight:500;line-height:1.4}
+
+/* NAV TOC */
+nav.toc{position:sticky;top:0;background:var(--w);border-bottom:2px solid var(--br);z-index:100;box-shadow:0 3px 14px rgba(30,58,111,.06)}
+nav.toc .container{display:flex;gap:24px;padding:16px 44px;overflow-x:auto;align-items:center}
+nav.toc .brand{display:flex;align-items:center;padding-right:22px;border-right:1px solid var(--br);margin-right:8px}
+nav.toc .brand img{height:32px;width:auto;display:block}
+nav.toc a{color:var(--tl);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;transition:color .2s;padding-bottom:3px;border-bottom:2px solid transparent}
+nav.toc a:hover{color:var(--bl);border-bottom-color:var(--r)}
+
+/* SECCIONES */
+section{padding:95px 0;border-bottom:1px solid var(--br);position:relative}
+section:nth-child(odd of section){background:var(--w)}
+.eyebrow{display:inline-block;font-size:.68rem;letter-spacing:3.5px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:18px;padding-bottom:8px;border-bottom:2px solid var(--r);padding-right:10px}
+h2{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--bl);line-height:1.2;margin-bottom:24px;letter-spacing:-.3px;max-width:900px}
+h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--bl);line-height:1.3;margin:34px 0 16px;letter-spacing:-.2px}
+h4{font-family:'Inter',sans-serif;font-size:.88rem;color:var(--bl);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.3px}
+p{font-size:1.02rem;color:var(--t);line-height:1.8;margin-bottom:16px;max-width:900px}
+p strong{color:var(--bl);font-weight:600}
+ul,ol{margin:12px 0 18px 22px;max-width:900px}
+ul li,ol li{font-size:1rem;color:var(--t);line-height:1.75;margin-bottom:8px}
+ul li strong,ol li strong{color:var(--bl);font-weight:600}
+
+.lead{font-family:'Playfair Display',serif;font-size:1.2rem;font-style:italic;color:var(--tl);line-height:1.6;max-width:840px;margin-bottom:32px;font-weight:400}
+
+/* CARDS / GRIDS */
+.grid{display:grid;gap:22px;margin:24px 0}
+.g-2{grid-template-columns:repeat(2,1fr)}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g-2,.g-3,.g-4{grid-template-columns:1fr}}
+
+.card{background:var(--w);border:1px solid var(--br);border-radius:4px;padding:30px 28px;transition:all .3s;position:relative}
+.card:hover{border-color:var(--bl3);box-shadow:0 10px 28px rgba(30,58,111,.08);transform:translateY(-2px)}
+.card .num{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--r);font-weight:700;margin-bottom:10px;letter-spacing:2px}
+.card h4{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--bl);font-weight:700;text-transform:none;letter-spacing:0;margin-bottom:12px;line-height:1.3}
+.card p{color:var(--tl);font-size:.95rem;line-height:1.7;margin-bottom:0}
+
+/* PILAR CARD — para los tres pilares */
+.pilar{background:var(--w);border:1px solid var(--br);border-radius:4px;padding:36px 32px;position:relative;border-top:4px solid var(--r)}
+.pilar .n{font-family:'Playfair Display',serif;font-size:.78rem;letter-spacing:3px;color:var(--r);font-weight:700;margin-bottom:14px;display:block}
+.pilar h4{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--bl);font-weight:700;text-transform:none;letter-spacing:-.2px;margin-bottom:14px}
+.pilar p{color:var(--tl);font-size:.96rem;line-height:1.75;margin-bottom:0}
+
+/* HIGHLIGHT BOX */
+.hlb{background:linear-gradient(95deg,rgba(30,58,111,.06),rgba(30,58,111,.01));border-left:4px solid var(--bl);padding:26px 32px;margin:28px 0;border-radius:0 4px 4px 0;max-width:960px}
+.hlb h4{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--bl);font-weight:700;text-transform:none;letter-spacing:0;margin-bottom:10px}
+.hlb p{color:var(--t);font-size:1rem;line-height:1.75;margin-bottom:0;max-width:none}
+.hlb.r{border-left-color:var(--r);background:linear-gradient(95deg,rgba(193,74,59,.07),rgba(193,74,59,.01))}
+.hlb.o{border-left-color:var(--o);background:linear-gradient(95deg,rgba(122,131,87,.09),rgba(122,131,87,.01))}
+
+/* TECHNICAL SUB-SECTION */
+.tech-block{border:1px solid var(--br);background:var(--w);padding:28px 32px;margin:18px 0;border-radius:4px}
+.tech-block h3{margin-top:0;font-size:1.15rem;padding-bottom:12px;border-bottom:1px solid var(--brl);margin-bottom:16px;color:var(--bl)}
+.tech-block ul{margin:8px 0 0 22px}
+.tech-block ul li{font-size:.95rem}
+
+/* PROCESS TIMELINE */
+.timeline{position:relative;padding-left:44px;margin:30px 0;max-width:900px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--r),var(--bl3))}
+.tl-step{position:relative;margin-bottom:38px;padding-bottom:8px}
+.tl-step::before{content:"";position:absolute;left:-40px;top:4px;width:24px;height:24px;background:var(--w);border:3px solid var(--r);border-radius:50%}
+.tl-step .n{font-family:'Playfair Display',serif;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:6px;display:block}
+.tl-step h4{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--bl);font-weight:700;text-transform:none;letter-spacing:0;margin-bottom:8px}
+.tl-step p{color:var(--tl);font-size:.98rem;line-height:1.7;margin-bottom:0}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--br);border-radius:4px;background:var(--w)}
+table{width:100%;border-collapse:collapse}
+table th{background:var(--bl);color:var(--w);text-align:left;padding:16px 20px;font-family:'Inter',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:1.3px;text-transform:uppercase}
+table td{padding:16px 20px;border-bottom:1px solid var(--brl);font-size:.93rem;color:var(--t);line-height:1.6;vertical-align:top}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:var(--bg)}
+table td strong{color:var(--bl);font-weight:600}
+
+/* PRODUCT CARDS */
+.product{background:var(--w);border:1px solid var(--br);border-radius:4px;padding:32px 30px;margin-bottom:20px;position:relative;transition:all .3s}
+.product:hover{border-color:var(--bl);box-shadow:0 8px 24px rgba(30,58,111,.08)}
+.product .tag{display:inline-block;font-size:.66rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--r);font-weight:700;margin-bottom:8px}
+.product h3{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--bl);margin:0 0 6px;font-weight:700;letter-spacing:-.3px}
+.product .spec{font-size:.9rem;color:var(--tl);font-weight:500;margin-bottom:14px;font-style:italic}
+.product p{color:var(--t);font-size:.98rem;line-height:1.7;margin-bottom:0;max-width:none}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:30px 0}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-card{background:var(--w);border:1px solid var(--br);border-radius:4px;padding:32px}
+.contact-card h4{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--bl);text-transform:none;letter-spacing:0;margin-bottom:14px;font-weight:700}
+.contact-card p{font-size:.96rem;line-height:1.8;color:var(--t);margin-bottom:6px}
+.contact-card strong{color:var(--bl);font-weight:600}
+
+/* FOOTER */
+footer{background:var(--bl);color:#d8dff0;padding:70px 0 50px;text-align:center;position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--r),transparent)}
+footer .brand{margin-bottom:18px;display:flex;justify-content:center}
+footer .brand img{height:56px;width:auto;filter:brightness(0) invert(1);opacity:.97}
+footer .tag{font-size:.72rem;letter-spacing:3.5px;color:#d8dff0;text-transform:uppercase;margin-bottom:32px}
+footer .meta{font-size:.82rem;color:#a5b1cc;opacity:.85;margin-top:28px;line-height:1.7}
+footer .meta strong{color:var(--w);font-weight:500}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(24px);transition:all .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* PRINT */
+@media print{
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  body{background:var(--w);font-size:11pt}
+  nav.toc{display:none}
+  section{page-break-before:always;padding:30px 0;border-bottom:none}
+  .hero{padding:50px 0 60px;page-break-after:always}
+  .hero h1{font-size:2.4rem}
+  .hero .sub{font-size:1.1rem}
+  h2{font-size:1.8rem}
+  h3{font-size:1.2rem}
+  .card,.pilar,.hlb,.tech-block,.product,.tl-step,.contact-card{break-inside:avoid}
+  .fade-in{opacity:1!important;transform:none!important}
+  footer{page-break-before:always}
+  @page{size:A4;margin:14mm}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{padding:0 26px}
+  .hero{padding:70px 0 80px}
+  .hero h1{font-size:2.2rem}
+  .hero .sub{font-size:1.1rem}
+  h2{font-size:1.7rem}
+  section{padding:60px 0}
+  nav.toc .container{padding:14px 20px;gap:16px}
+  nav.toc .brand{padding-right:14px;margin-right:4px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO / PORTADA -->
+<header class="hero">
+  <div class="container hero-inner">
+    <img src="falhaus-logo.svg" alt="Falhaus · lo tuyo merece lugar" class="hero-logo">
+    <span class="eyebrow">Brochure Institucional 2026</span>
+    <h1>Construcción modular para proyectos<br>habitacionales de escala</h1>
+    <p class="sub">Presentación institucional y Memoria Descriptiva del sistema constructivo modular industrializado.</p>
+    <div class="hero-meta">
+      <div class="item">
+        <div class="lbl">Empresa</div>
+        <div class="val">Falhaus — Argentina</div>
+      </div>
+      <div class="item">
+        <div class="lbl">Sede</div>
+        <div class="val">Martínez · Provincia de Buenos Aires</div>
+      </div>
+      <div class="item">
+        <div class="lbl">Sistema</div>
+        <div class="val">Modular industrializado</div>
+      </div>
+      <div class="item">
+        <div class="lbl">Documento</div>
+        <div class="val">Presentación institucional</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV TOC -->
+<nav class="toc">
+  <div class="container">
+    <div class="brand"><img src="falhaus-logo.svg" alt="Falhaus"></div>
+    <a href="#quienes">01 · Quiénes somos</a>
+    <a href="#proposito">02 · Propósito</a>
+    <a href="#valor">03 · Propuesta de valor</a>
+    <a href="#respaldo">04 · Respaldo industrial</a>
+    <a href="#sistema">05 · Sistema constructivo</a>
+    <a href="#memoria1">06 · Memoria · I</a>
+    <a href="#memoria2">07 · Memoria · II</a>
+    <a href="#memoria3">08 · Memoria · III</a>
+    <a href="#clima">09 · Climas exigentes</a>
+    <a href="#productos">10 · Línea de productos</a>
+    <a href="#aplicacion">11 · Aplicación institucional</a>
+    <a href="#proceso">12 · Proceso</a>
+    <a href="#acompanamiento">13 · Acompañamiento</a>
+    <a href="#sintesis">14 · Síntesis</a>
+    <a href="#contacto">15 · Contacto</a>
+  </div>
+</nav>
+
+<!-- SECCION 01 — QUIÉNES SOMOS -->
+<section id="quienes">
+  <div class="container fade-in">
+    <span class="eyebrow">01 · Quiénes somos</span>
+    <h2>Una empresa argentina dedicada a soluciones habitacionales modulares industrializadas</h2>
+    <p class="lead">Falhaus diseña, provee e implementa módulos habitacionales prefabricados bajo procesos de industrialización controlada, con estándar industrial previsible y tiempos de ejecución significativamente menores que los de la construcción tradicional.</p>
+    <p>La compañía provee unidades estructuralmente independientes, entregadas con alto grado de terminación de fábrica, que pueden funcionar de manera individual o combinarse para conformar conjuntos de mayor escala. El sistema ha sido concebido para responder con <strong>rapidez, calidad y trazabilidad</strong> frente a demandas que no pueden esperar los plazos habituales de una obra tradicional.</p>
+
+    <div class="grid g-3" style="margin-top:40px">
+      <div class="card">
+        <div class="num">01</div>
+        <h4>Razón social</h4>
+        <p>Falhaus SRL</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h4>Sede administrativa</h4>
+        <p>Hipólito Yrigoyen 261 · Martínez · Provincia de Buenos Aires</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h4>Sitio institucional</h4>
+        <p>www.falhaus.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 02 — PROPÓSITO -->
+<section id="proposito">
+  <div class="container fade-in">
+    <span class="eyebrow">02 · Propósito y compromiso</span>
+    <h2>Proveer espacios reales para decisiones reales</h2>
+
+    <div class="grid g-3" style="margin-top:36px">
+      <div class="pilar">
+        <span class="n">Propósito</span>
+        <h4>Crear espacios habitables y funcionales</h4>
+        <p>Diseñados desde el uso real, que resuelvan necesidades concretas de vivienda, trabajo y servicios.</p>
+      </div>
+      <div class="pilar">
+        <span class="n">Visión</span>
+        <h4>Redefinir el modo de habitar</h4>
+        <p>A través de soluciones constructivas que se arman rápido, se adaptan fácil y mantienen estándares industriales consistentes.</p>
+      </div>
+      <div class="pilar">
+        <span class="n">Misión</span>
+        <h4>Ofrecer soluciones con respaldo</h4>
+        <p>Modulares, de armado rápido, accesibles, con calidad verificada y respaldo técnico integral para distintos contextos de uso.</p>
+      </div>
+    </div>
+
+    <div class="hlb" style="margin-top:40px">
+      <h4>Lo que define nuestro trabajo</h4>
+      <p>Rapidez de implementación, claridad en todo el proceso, versatilidad del sistema, confianza en los materiales utilizados y pertinencia de cada decisión constructiva respecto del uso previsto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 03 — PROPUESTA DE VALOR INSTITUCIONAL -->
+<section id="valor">
+  <div class="container fade-in">
+    <span class="eyebrow">03 · Propuesta de valor institucional</span>
+    <h2>Qué resuelve Falhaus para programas habitacionales de escala</h2>
+    <p>Las administraciones provinciales y municipales enfrentan con frecuencia situaciones que requieren respuestas habitacionales rápidas, de calidad y escalables: demandas de vivienda postergadas, operaciones productivas que exigen alojamiento para personal, comunidades en entornos remotos, o coyunturas que demandan soluciones en ventanas de tiempo acotadas. La construcción tradicional, por su naturaleza, no siempre puede acompañar esas velocidades ni asegurar la previsibilidad que un programa público exige.</p>
+    <p><strong>Falhaus propone un enfoque distinto, basado en la industrialización del proceso constructivo.</strong></p>
+
+    <div class="grid g-3" style="margin-top:40px">
+      <div class="pilar">
+        <span class="n">Pilar 01</span>
+        <h4>Tiempo</h4>
+        <p>Habilitación de operación en semanas, no en meses. Las unidades se fabrican en planta bajo control de calidad y se instalan en sitio en horas. El tiempo de obra en terreno se reduce de manera radical, eliminando imprevistos propios de la construcción húmeda.</p>
+      </div>
+      <div class="pilar">
+        <span class="n">Pilar 02</span>
+        <h4>Escala</h4>
+        <p>Capacidad de replicar unidades con estándar constante. El sistema permite operar por etapas sin comprometer la continuidad: las primeras unidades pueden estar operativas mientras se despliegan las siguientes, apto para cobertura territorial o expansión progresiva.</p>
+      </div>
+      <div class="pilar">
+        <span class="n">Pilar 03</span>
+        <h4>Confianza</h4>
+        <p>Materiales industriales de calidad verificada, garantía de fábrica y respaldo técnico local a lo largo de toda la vida útil de la unidad. Cada decisión constructiva responde a un uso real y está respaldada por la ingeniería del sistema.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 04 — RESPALDO INDUSTRIAL -->
+<section id="respaldo">
+  <div class="container fade-in">
+    <span class="eyebrow">04 · Respaldo y validación</span>
+    <h2>Alianzas industriales verificadas en origen</h2>
+    <p>Falhaus trabaja con socios industriales internacionales de primera línea, seleccionados por su capacidad productiva, el estándar de sus procesos y la consistencia de sus materiales. La incorporación de cada alianza industrial se realiza con <strong>auditoría directa en origen</strong>.</p>
+    <p>El equipo técnico de la empresa audita personalmente las fábricas de origen, verifica líneas productivas, controla estándares de ensamblado y selecciona proveedores en función de criterios técnicos exigentes. Los componentes se importan bajo este proceso de validación y <strong>las unidades se completan y nacionalizan en Argentina</strong>, integrando el ensamblaje final y el acondicionamiento técnico con equipos locales.</p>
+
+    <div class="hlb r">
+      <h4>Condición de ingreso al estándar Falhaus</h4>
+      <p>No se comercializan módulos cuyo origen y proceso no hayan sido revisados por el equipo de la empresa. La validación industrial en origen —sumada a la nacionalización y el control local del producto final— constituye uno de los pilares del estándar Falhaus.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 05 — SISTEMA CONSTRUCTIVO -->
+<section id="sistema">
+  <div class="container fade-in">
+    <span class="eyebrow">05 · Sistema constructivo</span>
+    <h2>Construcción modular industrializada de estructura metálica liviana</h2>
+    <p class="lead">El sistema constructivo Falhaus se basa en módulos habitacionales prefabricados, diseñados y fabricados bajo procesos de industrialización controlada, que permiten su transporte y posterior montaje en el sitio de implantación.</p>
+    <p>Los módulos se entregan como <strong>unidades estructuralmente independientes</strong>, con alto grado de terminación, que pueden funcionar de manera individual o combinarse entre sí para conformar viviendas, oficinas, espacios comunitarios u otros usos habitables.</p>
+    <p>El sistema prioriza la rapidez de ejecución, la eficiencia constructiva, la reducción de residuos en obra y el control de calidad, cumpliendo con los criterios de seguridad estructural y habitabilidad exigidos por la normativa técnica vigente.</p>
+
+    <div class="hlb o">
+      <h4>Denominación técnica del sistema</h4>
+      <p>Sistema constructivo modular industrializado — estructura metálica liviana.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 06 — MEMORIA DESCRIPTIVA PARTE 1 -->
+<section id="memoria1">
+  <div class="container fade-in">
+    <span class="eyebrow">06 · Memoria Descriptiva · Parte I</span>
+    <h2>Estructura portante y sistema de cerramiento</h2>
+
+    <div class="tech-block">
+      <h3>Estructura portante</h3>
+      <p>La estructura principal está conformada por un sistema de <strong>perfilería metálica liviana de 2,5 mm</strong> de espesor, fabricada en acero estructural galvanizado, compuesta por:</p>
+      <ul>
+        <li>Bastidores perimetrales de piso, muros y cubierta.</li>
+        <li>Columnas y vigas metálicas integradas al módulo.</li>
+        <li>Refuerzos estructurales en puntos de carga y anclaje.</li>
+      </ul>
+      <p style="margin-top:14px">El sistema está diseñado para soportar cargas verticales y horizontales, considerando las etapas de transporte, izaje, montaje y condiciones normales de uso.</p>
+    </div>
+
+    <div class="tech-block">
+      <h3>Muros</h3>
+      <p>Los muros están conformados por un <strong>panel sándwich de 75 mm</strong> de espesor compuesto por:</p>
+      <ul>
+        <li>Estructura metálica externa.</li>
+        <li>Material aislante térmico-acústico interior (EPS, lana de roca o PU).</li>
+        <li>Revestimiento exterior en chapa de acero resistente a la intemperie.</li>
+        <li>Revestimiento interior apto para uso habitacional.</li>
+      </ul>
+      <p style="margin-top:14px">Este sistema garantiza aislamiento térmico, aislamiento acústico y protección frente a la humedad, de acuerdo con los criterios habituales de la construcción en seco.</p>
+    </div>
+
+    <div class="tech-block">
+      <h3>Cubierta</h3>
+      <p>La cubierta se resuelve mediante <strong>paneles sándwich de 75 mm</strong> de espesor sobre estructura metálica, con pendiente y tratamiento impermeable, incorporando:</p>
+      <ul>
+        <li>Aislación térmica de lana de roca, EPS o PU.</li>
+        <li>Barrera hidrófuga.</li>
+        <li>Terminación exterior apta para exposición climática.</li>
+      </ul>
+    </div>
+
+    <div class="tech-block">
+      <h3>Piso</h3>
+      <p>El piso del módulo está compuesto por:</p>
+      <ul>
+        <li>Bastidor estructural metálico.</li>
+        <li>Placa de fibrocemento de base de 18 mm.</li>
+        <li>Terminación superior de piso SPC o PVC.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 07 — MEMORIA DESCRIPTIVA PARTE 2 -->
+<section id="memoria2">
+  <div class="container fade-in">
+    <span class="eyebrow">07 · Memoria Descriptiva · Parte II</span>
+    <h2>Instalaciones, fundación y montaje en obra</h2>
+
+    <div class="tech-block">
+      <h3>Instalaciones</h3>
+      <p>Las unidades contemplan la preinstalación o instalación completa de los siguientes sistemas, según el proyecto aprobado:</p>
+      <ul>
+        <li>Instalación eléctrica embutida en muros y piso.</li>
+        <li>Instalación sanitaria para agua fría, caliente y desagües.</li>
+        <li>Previsión para conexión a redes existentes o sistemas autónomos.</li>
+        <li>Tablero eléctrico independiente para cada unidad.</li>
+        <li>Ventanas de doble vidrio hermético (DVH).</li>
+        <li>Puertas de aluminio.</li>
+      </ul>
+      <p style="margin-top:14px">Todas las instalaciones se encuentran integradas al sistema modular, permitiendo una rápida conexión en el sitio.</p>
+    </div>
+
+    <div class="tech-block">
+      <h3>Fundación y apoyo</h3>
+      <p>El sistema está diseñado para apoyarse sobre fundaciones tradicionales, que pueden resolverse mediante:</p>
+      <ul>
+        <li>Platea de hormigón armado.</li>
+        <li>Bases puntuales, pilotes o vigas de fundación.</li>
+      </ul>
+      <p style="margin-top:14px">La definición final de la fundación queda sujeta al estudio de suelo, la normativa local y el proyecto aprobado por la autoridad competente de la jurisdicción.</p>
+    </div>
+
+    <div class="tech-block">
+      <h3>Montaje en obra</h3>
+      <p>El proceso de montaje se desarrolla mediante las siguientes instancias:</p>
+      <ol>
+        <li>Transporte del módulo hasta el sitio de implantación.</li>
+        <li>Posicionamiento mediante grúa o medios mecánicos.</li>
+        <li>Anclaje del módulo a la fundación, en caso de ser requerido.</li>
+        <li>Conexión de instalaciones a redes o sistemas autónomos.</li>
+      </ol>
+      <p style="margin-top:14px">El proceso de montaje es rápido, limpio y de mínima interferencia con el entorno, reduciendo significativamente los tiempos de obra y la afectación al predio y al entorno circundante.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 08 — MEMORIA DESCRIPTIVA PARTE 3 -->
+<section id="memoria3">
+  <div class="container fade-in">
+    <span class="eyebrow">08 · Memoria Descriptiva · Parte III</span>
+    <h2>Uso, destino y cumplimiento normativo</h2>
+
+    <div class="tech-block">
+      <h3>Uso y destino</h3>
+      <p>El sistema constructivo Falhaus es apto para los siguientes destinos:</p>
+      <ul>
+        <li>Vivienda unifamiliar.</li>
+        <li>Vivienda con fines turísticos.</li>
+        <li>Oficinas, estudios o usos complementarios.</li>
+        <li>Espacios comunitarios, institucionales o de servicio, según proyecto aprobado.</li>
+      </ul>
+      <p style="margin-top:14px">El uso final estará sujeto a la zonificación y normativa urbanística vigente de cada municipio.</p>
+    </div>
+
+    <div class="tech-block">
+      <h3>Consideraciones finales</h3>
+      <p>El sistema Falhaus constituye un <strong>sistema constructivo industrializado</strong>, adaptable a distintas configuraciones y escalas, que cumple con los principios de seguridad, durabilidad y habitabilidad exigidos por la normativa técnica vigente. La empresa entrega una solución llave en mano sin obra húmeda en el sitio de instalación, con trazabilidad completa del proceso productivo.</p>
+    </div>
+
+    <div class="hlb">
+      <h4>Documentación técnica complementaria</h4>
+      <p>La presente Memoria Descriptiva constituye la síntesis técnica del sistema. Falhaus pone a disposición los planos técnicos del sistema para revisión por parte de los organismos técnicos que así lo requieran.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 09 — CLIMAS EXIGENTES -->
+<section id="clima">
+  <div class="container fade-in">
+    <span class="eyebrow">09 · Desempeño técnico</span>
+    <h2>Un sistema diseñado para operar en climas y entornos exigentes</h2>
+    <p>La configuración del sistema Falhaus ha sido concebida contemplando condiciones de uso que incluyen <strong>amplitud térmica significativa, exposición a vientos intensos, humedad y regiones de difícil accesibilidad logística</strong>. Los módulos incorporan aislaciones configurables en función del clima y del uso previsto, permitiendo adaptar el nivel de performance térmica y acústica al entorno específico de cada proyecto.</p>
+
+    <h3>Capacidades técnicas relevantes para entornos australes y de alta exigencia climática</h3>
+    <div class="grid g-2" style="margin-top:20px">
+      <div class="card">
+        <div class="num">01</div>
+        <h4>Aislación térmica ajustable</h4>
+        <p>Espesores de panel de 50/75/100 mm, con materiales aislantes de distintas performances: lana de roca, EPS, PU.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h4>Cerramientos resistentes</h4>
+        <p>Revestimientos exteriores en chapa de acero o aleación de aluminio tratados para exposición intemperie.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h4>Aberturas de alta eficiencia</h4>
+        <p>Ventanas de doble vidrio hermético (DVH) y, en los modelos premium, vidrio Low-E templado.</p>
+      </div>
+      <div class="card">
+        <div class="num">04</div>
+        <h4>Estructura galvanizada</h4>
+        <p>Protección contra la corrosión, especialmente relevante en ambientes húmedos, salinos o con alta variabilidad climática.</p>
+      </div>
+      <div class="card">
+        <div class="num">05</div>
+        <h4>Confort térmico integrado</h4>
+        <p>Techos con aislación de espuma PU y sistemas de climatización posibles en fábrica: aire acondicionado y calefacción.</p>
+      </div>
+      <div class="card">
+        <div class="num">06</div>
+        <h4>Aptitud verificada</h4>
+        <p>Diseñado para operar en regiones frías, ventosas o húmedas, manteniendo condiciones de habitabilidad adecuadas a lo largo del año.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 10 — LÍNEA DE PRODUCTOS -->
+<section id="productos">
+  <div class="container fade-in">
+    <span class="eyebrow">10 · Línea de productos</span>
+    <h2>Cinco modelos disponibles bajo un mismo estándar industrial</h2>
+    <p>Todos los modelos son modulares, transportables y personalizables según el proyecto. Se comparte una base industrial común y un estándar de ensamblado verificado, lo que permite <strong>combinar modelos dentro de un mismo programa</strong> en función del uso asignado a cada unidad.</p>
+
+    <div class="product">
+      <div class="tag">Modelo 01 · Casa modular expandible</div>
+      <h3>Falhaus Nómada</h3>
+      <div class="spec">36 m² y 72 m² · Instalación aproximada: 2 horas</div>
+      <p>Solución principal para programas habitacionales de escala. Se transporta cerrada para optimizar la logística y se despliega en destino para alcanzar su superficie completa. Admite hasta 5 ambientes y configuraciones personalizables por proyecto. Equipamiento posible: baño completo, cocina y mobiliario básico integrado.</p>
+    </div>
+
+    <div class="product">
+      <div class="tag">Modelo 02 · Módulo plegable compacto</div>
+      <h3>Falhaus Refugio</h3>
+      <div class="spec">14,5 m² · Instalación aproximada: 10 minutos</div>
+      <p>Unidad compacta y plegable. Apta como oficina operativa, dormitorio de apoyo, depósito técnico o módulo auxiliar en un programa de mayor escala. Aislación configurable según clima.</p>
+    </div>
+
+    <div class="product">
+      <div class="tag">Modelo 03 · Módulo premium de vidrio</div>
+      <h3>Falhaus Horizonte</h3>
+      <div class="spec">13 m² y 26 m² · Instalación aproximada: 1 hora</div>
+      <p>Módulo con gran presencia visual, pensado para usos de hospedaje o representación institucional. Equipamiento integrado completo: cocina, baño, climatización.</p>
+    </div>
+
+    <div class="product">
+      <div class="tag">Modelo 04 · Módulo premium contemporáneo</div>
+      <h3>Falhaus Nova</h3>
+      <div class="spec">28 m² y 38 m² · Instalación aproximada: 1 hora</div>
+      <p>Tope de línea. Estructura en acero galvanizado en caliente, revestimiento en aleación de aluminio de alta performance, terminaciones de alto nivel y equipamiento completo. Apto para usos institucionales de alta visibilidad.</p>
+    </div>
+
+    <div class="product">
+      <div class="tag">Modelo 05 · Habitacional en altura</div>
+      <h3>Falhaus Altavista</h3>
+      <div class="spec">Dos unidades de 36 m² integradas por escalera exterior · Instalación aproximada: 8 horas</div>
+      <p>Solución de densificación: integra dos unidades independientes en una misma implantación, con mayor capacidad por superficie. Mantiene el mismo estándar industrial de la línea.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 11 — APLICACIÓN INSTITUCIONAL -->
+<section id="aplicacion">
+  <div class="container fade-in">
+    <span class="eyebrow">11 · Aplicación institucional</span>
+    <h2>Modelos aplicables a operaciones de alcance provincial</h2>
+    <p>A continuación se presenta una orientación sobre qué modelos resultan más aptos para cada tipo de programa, sin perjuicio de que cada operación pueda definir configuraciones específicas según la necesidad de la jurisdicción.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:42%">Necesidad institucional</th>
+            <th style="width:26%">Modelo recomendado</th>
+            <th>Observaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vivienda para comunidades o familias beneficiarias de un programa habitacional</td>
+            <td><strong>Falhaus Nómada 36 o 72</strong></td>
+            <td>Admite hasta 5 ambientes, escalable por etapas, estándar repetible</td>
+          </tr>
+          <tr>
+            <td>Alojamiento para personal técnico, operativo o de emergencia en localidades remotas</td>
+            <td><strong>Falhaus Nómada / Refugio</strong></td>
+            <td>Despliegue en horas, reubicable según evolución del programa</td>
+          </tr>
+          <tr>
+            <td>Oficinas institucionales, puestos de atención o espacios administrativos en terreno</td>
+            <td><strong>Falhaus Refugio / Horizonte</strong></td>
+            <td>Instalación rápida, equipamiento según uso</td>
+          </tr>
+          <tr>
+            <td>Espacios de representación institucional o usos con requerimiento de visibilidad</td>
+            <td><strong>Falhaus Horizonte / Nova</strong></td>
+            <td>Estética contemporánea, equipamiento completo</td>
+          </tr>
+          <tr>
+            <td>Operaciones de densificación o alojamiento con mayor capacidad por superficie</td>
+            <td><strong>Falhaus Altavista</strong></td>
+            <td>Dos unidades integradas en altura, mismo estándar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="hlb r">
+      <h4>Configuración a medida del programa</h4>
+      <p>Cada programa puede combinar distintos modelos bajo un mismo estándar constructivo. La empresa desarrolla con la contraparte institucional la configuración específica, el cronograma de despliegue y el plan logístico adecuado al territorio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 12 — PROCESO -->
+<section id="proceso">
+  <div class="container fade-in">
+    <span class="eyebrow">12 · Metodología de trabajo</span>
+    <h2>Un proceso previsible, acompañado en cada etapa</h2>
+    <p>El trabajo con una organización pública requiere previsibilidad, trazabilidad documental y acompañamiento técnico a lo largo de todo el proceso. Falhaus estructura cada proyecto en <strong>cuatro instancias claras</strong>.</p>
+
+    <div class="timeline" style="margin-top:36px">
+      <div class="tl-step">
+        <span class="n">Paso 01</span>
+        <h4>Consulta y análisis de necesidad</h4>
+        <p>Se realiza una escucha inicial del problema a resolver, se analizan las condiciones del territorio y se identifica qué modelo o combinación de modelos resulta más apta para el programa.</p>
+      </div>
+      <div class="tl-step">
+        <span class="n">Paso 02</span>
+        <h4>Propuesta técnica y económica</h4>
+        <p>Se elabora una propuesta personalizada con definición de cantidad de unidades, configuración, nivel de terminación, opciones de personalización y cronograma de entrega. Se acompaña la documentación técnica necesaria para los procesos internos de validación de la contraparte.</p>
+      </div>
+      <div class="tl-step">
+        <span class="n">Paso 03</span>
+        <h4>Fabricación, transporte e instalación</h4>
+        <p>Las unidades se fabrican bajo control industrial, se transportan al sitio de implantación con logística especializada, se posicionan y se dejan operativas. La instalación por unidad se realiza en horas, según acceso y condiciones del sitio.</p>
+      </div>
+      <div class="tl-step">
+        <span class="n">Paso 04</span>
+        <h4>Postventa y soporte técnico</h4>
+        <p>Cada módulo cuenta con garantía de fábrica y respaldo del equipo técnico de Falhaus. El acompañamiento continúa luego de la puesta en funcionamiento, asegurando la vida útil operativa de la unidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 13 — ACOMPAÑAMIENTO -->
+<section id="acompanamiento">
+  <div class="container fade-in">
+    <span class="eyebrow">13 · Acompañamiento técnico integral</span>
+    <h2>Un interlocutor único a lo largo de todo el proceso</h2>
+    <p>Falhaus provee acompañamiento técnico integral desde la consulta inicial hasta la postventa, bajo el formato de <strong>interlocutor único</strong>. Esto significa que la organización pública dialoga con un equipo responsable de la totalidad del proceso, evitando la fragmentación habitual en proyectos donde intervienen múltiples actores.</p>
+
+    <h3>El acompañamiento incluye</h3>
+    <div class="grid g-2" style="margin-top:20px">
+      <div class="card">
+        <div class="num">—</div>
+        <h4>Asesoramiento técnico</h4>
+        <p>Para la definición de la configuración más adecuada a cada necesidad.</p>
+      </div>
+      <div class="card">
+        <div class="num">—</div>
+        <h4>Documentación técnica</h4>
+        <p>Preparación de la documentación necesaria para los trámites internos de la jurisdicción.</p>
+      </div>
+      <div class="card">
+        <div class="num">—</div>
+        <h4>Coordinación logística</h4>
+        <p>Desde el origen de fabricación hasta el sitio de implantación final.</p>
+      </div>
+      <div class="card">
+        <div class="num">—</div>
+        <h4>Supervisión de montaje</h4>
+        <p>Y entrega operativa de cada unidad con controles de calidad.</p>
+      </div>
+      <div class="card">
+        <div class="num">—</div>
+        <h4>Soporte técnico posterior</h4>
+        <p>Con garantía de fábrica y disponibilidad de servicio local.</p>
+      </div>
+      <div class="card">
+        <div class="num">—</div>
+        <h4>Trazabilidad completa</h4>
+        <p>Cada unidad queda documentada desde fabricación hasta puesta en uso.</p>
+      </div>
+    </div>
+
+    <div class="hlb o">
+      <h4>Objetivo</h4>
+      <p>Que cada unidad entregada se traduzca en una solución real, operativa y auditable, sin fricciones innecesarias para la administración.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 14 — SÍNTESIS -->
+<section id="sintesis">
+  <div class="container fade-in">
+    <span class="eyebrow">14 · Síntesis institucional</span>
+    <h2>Una respuesta industrial a una demanda urgente</h2>
+    <p>Falhaus ofrece a las organizaciones públicas una <strong>solución constructiva industrializada, verificada en origen, técnicamente respaldada y operativamente previsible</strong>. El sistema permite habilitar unidades habitables en ventanas de tiempo significativamente menores que las de la construcción tradicional, con trazabilidad completa del proceso y capacidad real de escalar por etapas.</p>
+
+    <h3>Tres pilares sostienen esta propuesta</h3>
+    <div class="grid g-3" style="margin-top:20px">
+      <div class="pilar">
+        <span class="n">01</span>
+        <h4>Tiempo</h4>
+        <p>Habilitación en semanas. Instalación por unidad en horas.</p>
+      </div>
+      <div class="pilar">
+        <span class="n">02</span>
+        <h4>Escala</h4>
+        <p>Unidades repetibles bajo un mismo estándar industrial, desplegables por etapas.</p>
+      </div>
+      <div class="pilar">
+        <span class="n">03</span>
+        <h4>Confianza</h4>
+        <p>Materiales industriales de calidad verificada, alianzas auditadas en origen, garantía de fábrica y acompañamiento técnico local.</p>
+      </div>
+    </div>
+
+    <div class="hlb" style="margin-top:36px">
+      <h4>Disposición institucional</h4>
+      <p>La empresa se pone a disposición de la jurisdicción para evaluar en detalle la viabilidad técnica y operativa de un programa específico, y acompañar cada instancia del proceso con el estándar que la magnitud de la decisión amerita.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCION 15 — CONTACTO -->
+<section id="contacto">
+  <div class="container fade-in">
+    <span class="eyebrow">15 · Contacto institucional</span>
+    <h2>Disposición para avanzar en una conversación concreta</h2>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Sede administrativa</h4>
+        <p><strong>Hipólito Yrigoyen 261</strong></p>
+        <p>Martínez — Provincia de Buenos Aires</p>
+        <p>República Argentina</p>
+      </div>
+      <div class="contact-card">
+        <h4>Canales institucionales</h4>
+        <p><strong>Web:</strong> www.falhaus.com</p>
+        <p><strong>Teléfono:</strong> +54 9 11 4446 0130</p>
+        <p><strong>Instagram:</strong> @somosfalhaus</p>
+      </div>
+    </div>
+
+    <div class="hlb r" style="margin-top:36px">
+      <h4>A disposición</h4>
+      <p>Falhaus agradece la oportunidad de presentar el sistema y queda a disposición para ampliar cualquier aspecto técnico, económico o logístico que la jurisdicción considere necesario para avanzar en el análisis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="brand"><img src="falhaus-logo.svg" alt="Falhaus · lo tuyo merece lugar"></div>
+    <div class="tag">Soluciones Constructivas Modulares Industrializadas</div>
+    <div class="meta">
+      <strong>Falhaus SRL · Brochure Institucional 2026</strong><br>
+      Hipólito Yrigoyen 261 · Martínez · Provincia de Buenos Aires · República Argentina<br>
+      www.falhaus.com · +54 9 11 4446 0130
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
