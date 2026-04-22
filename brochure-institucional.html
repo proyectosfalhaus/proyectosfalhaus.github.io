@@ -145,19 +145,105 @@ footer .meta strong{color:var(--w);font-weight:500}
 
 /* PRINT */
 @media print{
-  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
-  body{background:var(--w);font-size:11pt}
-  nav.toc{display:none}
-  section{page-break-before:always;padding:30px 0;border-bottom:none}
-  .hero{padding:50px 0 60px;page-break-after:always}
-  .hero h1{font-size:2.4rem}
-  .hero .sub{font-size:1.1rem}
-  h2{font-size:1.8rem}
-  h3{font-size:1.2rem}
-  .card,.pilar,.hlb,.tech-block,.product,.tl-step,.contact-card{break-inside:avoid}
-  .fade-in{opacity:1!important;transform:none!important}
-  footer{page-break-before:always}
-  @page{size:A4;margin:14mm}
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact;-moz-print-color-adjust:exact}
+  body{background:var(--w);font-size:10.5pt;line-height:1.55}
+  @page{size:A4;margin:12mm 14mm}
+
+  /* ocultar TOC */
+  nav.toc{display:none !important}
+
+  /* HERO: página dedicada, contenido compacto y centrado verticalmente */
+  .hero{padding:28mm 0 22mm;page-break-after:always;min-height:240mm;display:flex;align-items:center}
+  .hero::before{display:none}
+  .hero-inner{width:100%}
+  .hero-logo{width:190px;max-width:60%;margin-bottom:28px}
+  .hero .eyebrow{font-size:.62rem;margin-bottom:20px;padding:6px 16px}
+  .hero h1{font-size:2.1rem;margin-bottom:16px;line-height:1.15}
+  .hero .sub{font-size:.98rem;margin-bottom:28px;line-height:1.4}
+  .hero-meta{margin-top:28px;padding-top:22px;gap:20px}
+  .hero-meta .item .lbl{font-size:.58rem;margin-bottom:5px}
+  .hero-meta .item .val{font-size:.92rem}
+
+  /* SECCIONES: cada una en página nueva, padding compacto */
+  section{page-break-before:always;padding:8mm 0 0;border-bottom:none}
+
+  /* JERARQUÍA: títulos pegados a su contenido */
+  .eyebrow{font-size:.62rem;margin-bottom:10px;padding-bottom:5px;page-break-after:avoid}
+  h2{font-size:1.55rem;line-height:1.2;margin-bottom:14px;page-break-after:avoid;max-width:100%}
+  h3{font-size:1.08rem;margin:16px 0 8px;page-break-after:avoid}
+  h4{page-break-after:avoid}
+
+  /* PÁRRAFOS y LISTAS: evitar viudas/huérfanas */
+  p{font-size:.9rem;line-height:1.55;margin-bottom:9px;orphans:3;widows:3;max-width:100%}
+  ul,ol{margin:6px 0 12px 20px;max-width:100%}
+  ul li,ol li{font-size:.88rem;line-height:1.5;margin-bottom:4px}
+  .lead{font-size:1rem;line-height:1.5;margin-bottom:18px}
+
+  /* ELEMENTOS COMPUESTOS: no se cortan por el medio */
+  .card,.pilar,.hlb,.tech-block,.product,.tl-step,.contact-card,.tbl-wrap{page-break-inside:avoid;break-inside:avoid}
+
+  /* GRIDS: gaps reducidos para que entren mejor en la página */
+  .grid{gap:12px;margin:14px 0}
+
+  /* CARDS más compactos */
+  .card{padding:16px 18px}
+  .card .num{font-size:1.2rem;margin-bottom:6px}
+  .card h4{font-size:.92rem;margin-bottom:6px;letter-spacing:0}
+  .card p{font-size:.82rem;line-height:1.5}
+
+  /* PILARES más compactos */
+  .pilar{padding:18px 20px;border-top-width:3px}
+  .pilar .n{font-size:.68rem;margin-bottom:8px}
+  .pilar h4{font-size:1.1rem;margin-bottom:8px}
+  .pilar p{font-size:.85rem;line-height:1.55}
+
+  /* TECH BLOCKS (memoria descriptiva) */
+  .tech-block{padding:14px 18px;margin:8px 0}
+  .tech-block h3{font-size:1rem;margin-bottom:8px;padding-bottom:6px}
+  .tech-block ul{margin-top:4px}
+  .tech-block ul li{font-size:.85rem}
+
+  /* HIGHLIGHT BOXES */
+  .hlb{padding:12px 16px;margin:12px 0}
+  .hlb h4{font-size:.98rem;margin-bottom:5px}
+  .hlb p{font-size:.88rem;line-height:1.55}
+
+  /* PRODUCTOS */
+  .product{padding:16px 20px;margin-bottom:10px}
+  .product .tag{font-size:.58rem;margin-bottom:5px}
+  .product h3{font-size:1.15rem;margin-bottom:4px}
+  .product .spec{font-size:.78rem;margin-bottom:8px}
+  .product p{font-size:.85rem;line-height:1.55}
+
+  /* TIMELINE */
+  .timeline{padding-left:28px;margin:16px 0}
+  .timeline::before{left:9px}
+  .tl-step{margin-bottom:18px}
+  .tl-step::before{left:-34px;width:18px;height:18px;border-width:2px}
+  .tl-step .n{font-size:.66rem;margin-bottom:4px}
+  .tl-step h4{font-size:1.05rem;margin-bottom:5px}
+  .tl-step p{font-size:.86rem;line-height:1.55}
+
+  /* TABLA */
+  table{page-break-inside:auto}
+  table tr{page-break-inside:avoid;break-inside:avoid}
+  table th{padding:10px 14px;font-size:.72rem}
+  table td{padding:9px 14px;font-size:.82rem;line-height:1.45}
+
+  /* CONTACTO */
+  .contact-grid{gap:22px;margin:18px 0}
+  .contact-card{padding:20px}
+  .contact-card h4{font-size:1.05rem;margin-bottom:10px}
+  .contact-card p{font-size:.88rem;line-height:1.6;margin-bottom:4px}
+
+  /* ANIMACIONES siempre visibles en impresión */
+  .fade-in{opacity:1 !important;transform:none !important}
+
+  /* FOOTER al final sin forzar página nueva */
+  footer{page-break-before:avoid;padding:34px 0 26px}
+  footer .brand img{height:44px}
+  footer .tag{font-size:.66rem;margin-bottom:18px}
+  footer .meta{font-size:.76rem;margin-top:18px;line-height:1.6}
 }
 
 /* RESPONSIVE */
